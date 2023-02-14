@@ -19,25 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="分享生信学习过程中的知识">
-<meta property="og:type" content="website">
+    <meta name="description" content="统计基因组脚本1. 用gffutils将gff3文件更改为sqlite database123python .&#x2F;gff2sqliteDB.py \        --gfffile GCF_000281125.3_ASM28112v4_genomic.gff.gz \        --outdb GCF_000281125.3_ASM28112v4_genomic.gffutils.db  2.">
+<meta property="og:type" content="article">
 <meta property="og:title" content="小傻的帽子">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2023/02/14/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E5%9B%A0%E7%BB%84/index.html">
 <meta property="og:site_name" content="小傻的帽子">
-<meta property="og:description" content="分享生信学习过程中的知识">
+<meta property="og:description" content="统计基因组脚本1. 用gffutils将gff3文件更改为sqlite database123python .&#x2F;gff2sqliteDB.py \        --gfffile GCF_000281125.3_ASM28112v4_genomic.gff.gz \        --outdb GCF_000281125.3_ASM28112v4_genomic.gffutils.db  2.">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-14T10:02:49.382Z">
+<meta property="article:modified_time" content="2022-12-21T00:17:52.000Z">
 <meta property="article:author" content="Se">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/02/14/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E5%9B%A0%E7%BB%84/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/02/14/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E5%9B%A0%E7%BB%84/","path":"2023/02/14/统计基因组/","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>小傻的帽子</title>
+<title> | 小傻的帽子</title>
   
 
 
@@ -67,7 +69,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">小傻的帽子</h1>
+      <p class="site-title">小傻的帽子</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -89,7 +91,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -102,6 +104,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%9F%BA%E5%9B%A0%E7%BB%84"><span class="nav-number">1.</span> <span class="nav-text">统计基因组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%9A%E6%9C%AC"><span class="nav-number">1.1.</span> <span class="nav-text">脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%94%A8gffutils%E5%B0%86gff3%E6%96%87%E4%BB%B6%E6%9B%B4%E6%94%B9%E4%B8%BAsqlite-database"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 用gffutils将gff3文件更改为sqlite database</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%86%8D%E8%BF%9B%E8%A1%8C%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 再进行统计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9fasta%E7%9A%84%E7%BB%9F%E8%AE%A1"><span class="nav-number">1.2.</span> <span class="nav-text">对fasta的统计</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -135,16 +138,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/14/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E5%9B%A0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -158,13 +162,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 小傻的帽子">
+      <meta itemprop="name" content=" | 小傻的帽子">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/02/14/%E7%BB%9F%E8%AE%A1%E5%9F%BA%E5%9B%A0%E7%BB%84/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -194,7 +198,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="统计基因组"><a href="#统计基因组" class="headerlink" title="统计基因组"></a>统计基因组</h1><h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h3 id="1-用gffutils将gff3文件更改为sqlite-database"><a href="#1-用gffutils将gff3文件更改为sqlite-database" class="headerlink" title="1. 用gffutils将gff3文件更改为sqlite database"></a>1. 用gffutils将gff3文件更改为sqlite database</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python ./gff2sqliteDB.py \</span><br><span class="line">        --gfffile GCF_000281125.3_ASM28112v4_genomic.gff.gz \</span><br><span class="line">        --outdb GCF_000281125.3_ASM28112v4_genomic.gffutils.db</span><br></pre></td></tr></table></figure>
+        <h1 id="统计基因组"><a href="#统计基因组" class="headerlink" title="统计基因组"></a>统计基因组</h1><h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h3 id="1-用gffutils将gff3文件更改为sqlite-database"><a href="#1-用gffutils将gff3文件更改为sqlite-database" class="headerlink" title="1. 用gffutils将gff3文件更改为sqlite database"></a>1. 用gffutils将gff3文件更改为sqlite database</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python ./gff2sqliteDB.py \</span><br><span class="line">        --gfffile GCF_000281125.3_ASM28112v4_genomic.gff.gz \</span><br><span class="line">        --outdb GCF_000281125.3_ASM28112v4_genomic.gffutils.db</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-再进行统计"><a href="#2-再进行统计" class="headerlink" title="2. 再进行统计"></a>2. 再进行统计</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python ./stat_geneFeatures.py \</span><br><span class="line">				--dbfile GCF_000281125.3_ASM28112v4_genomic.gffutils.db \</span><br><span class="line">				--fafile GCF_000281125.3_ASM28112v4_genomic.fna \</span><br><span class="line">				--outprefix crocodilian</span><br></pre></td></tr></table></figure>
 
@@ -207,7 +211,6 @@
 <h2 id="对fasta的统计"><a href="#对fasta的统计" class="headerlink" title="对fasta的统计"></a>对fasta的统计</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python3 \</span><br><span class="line">/stor9000/apps/users/NWSUAF/2015010778/05_software/python/StatGenome.py \</span><br><span class="line">-i ./pilon3.fasta \</span><br><span class="line">-o ./pilon3.fasta.stat</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Created on Wed Oct 17 16:11:15 CST 2018</span></span><br><span class="line"><span class="string">@Mail: minnglee@163.com</span></span><br><span class="line"><span class="string">@Author: Ming Li</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sys,os,logging,click</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">logging.basicConfig(filename=os.path.basename(__file__).replace(<span class="string">&#x27;.py&#x27;</span>,<span class="string">&#x27;.log&#x27;</span>),</span><br><span class="line">                    <span class="built_in">format</span>=<span class="string">&#x27;%(asctime)s: %(name)s: %(levelname)s: %(message)s&#x27;</span>,level=logging.DEBUG,filemode=<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">logging.info(<span class="string">f&quot;The command line is:\n\tpython3 <span class="subst">&#123;<span class="string">&#x27; &#x27;</span>.join(sys.argv)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">LoadFasta</span>(<span class="params">File</span>):</span><br><span class="line">    <span class="type">Dict</span> = &#123;&#125;</span><br><span class="line">    seq = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> File:</span><br><span class="line">        line = line.strip()</span><br><span class="line">        <span class="keyword">if</span> line[<span class="number">0</span>] == <span class="string">&#x27;&gt;&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(seq) &gt; <span class="number">0</span>:</span><br><span class="line">                <span class="type">Dict</span>[name] = seq</span><br><span class="line">            name = line.split()[<span class="number">0</span>][<span class="number">1</span>:]</span><br><span class="line">            seq = <span class="string">&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>: seq += line</span><br><span class="line">    <span class="type">Dict</span>[name] = seq</span><br><span class="line">    <span class="keyword">return</span> <span class="type">Dict</span></span><br><span class="line"><span class="meta">@click.command()</span></span><br><span class="line"><span class="meta">@click.option(<span class="params"><span class="string">&#x27;-i&#x27;</span>,<span class="string">&#x27;--input&#x27;</span>,<span class="built_in">type</span>=click.File(<span class="params"><span class="string">&#x27;r&#x27;</span></span>),<span class="built_in">help</span>=<span class="string">&#x27;The input file&#x27;</span>,required=<span class="literal">True</span></span>)</span></span><br><span class="line"><span class="meta">@click.option(<span class="params"><span class="string">&#x27;-o&#x27;</span>,<span class="string">&#x27;--output&#x27;</span>,<span class="built_in">type</span>=click.File(<span class="params"><span class="string">&#x27;w&#x27;</span></span>),<span class="built_in">help</span>=<span class="string">&#x27;The output file&#x27;</span>,required=<span class="literal">True</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>(<span class="params"><span class="built_in">input</span>,output</span>):</span><br><span class="line">    FaDict = LoadFasta(<span class="built_in">input</span>)</span><br><span class="line">    LenList = []</span><br><span class="line">    TotalBase = <span class="number">0</span></span><br><span class="line">    Gap = <span class="number">0</span></span><br><span class="line">    GC = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> key,value <span class="keyword">in</span> FaDict.items():</span><br><span class="line">        LenList.append(<span class="built_in">len</span>(value))</span><br><span class="line">        TotalBase += <span class="built_in">len</span>(value)</span><br><span class="line">        Gap += value.upper().count(<span class="string">&#x27;N&#x27;</span>)</span><br><span class="line">        GC += value.upper().count(<span class="string">&#x27;G&#x27;</span>)</span><br><span class="line">        GC += value.upper().count(<span class="string">&#x27;C&#x27;</span>)</span><br><span class="line">    LenList.sort(reverse=<span class="literal">True</span>)</span><br><span class="line">    Tmp = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> scaffold <span class="keyword">in</span> LenList:</span><br><span class="line">        Tmp += scaffold</span><br><span class="line">        <span class="keyword">if</span> Tmp &gt;= TotalBase * <span class="number">0.5</span> :</span><br><span class="line">            N50 = scaffold</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    output.write(<span class="string">f&#x27;Total sequence length:\t<span class="subst">&#123;TotalBase&#125;</span>\n&#x27;</span>)</span><br><span class="line">    output.write(<span class="string">f&#x27;Total assembly gap length:\t<span class="subst">&#123;Gap&#125;</span>\n&#x27;</span>)</span><br><span class="line">    output.write(<span class="string">f&#x27;GC ratio:\t<span class="subst">&#123;<span class="built_in">round</span>(GC/(TotalBase-Gap),<span class="number">4</span>)&#125;</span>\n&#x27;</span>)</span><br><span class="line">    output.write(<span class="string">f&#x27;Number of scaffolds:\t<span class="subst">&#123;<span class="built_in">len</span>(LenList)&#125;</span>\n&#x27;</span>)</span><br><span class="line">    output.write(<span class="string">f&#x27;Scaffold N50:\t<span class="subst">&#123;N50&#125;</span>\n&#x27;</span>)</span><br><span class="line">    output.write(<span class="string">f&#x27;Max Scaffold:\t<span class="subst">&#123;<span class="built_in">max</span>(LenList)&#125;</span>\n&#x27;</span>)</span><br><span class="line">    output.write(<span class="string">f&#x27;Min Scaffold:\t<span class="subst">&#123;<span class="built_in">min</span>(LenList)&#125;</span>\n&#x27;</span>)</span><br><span class="line">    output.write(<span class="string">f&#x27;Scaffold mean:\t<span class="subst">&#123;np.mean(LenList)&#125;</span>\n&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
@@ -215,80 +218,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/14/hello-hexo/" rel="prev" title="hello-hexo">
+                  <i class="fa fa-chevron-left"></i> hello-hexo
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/14/hello-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Se">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小傻的帽子">
-      <meta itemprop="description" content="分享生信学习过程中的知识">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 小傻的帽子">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/02/14/hello-hexo/" class="post-title-link" itemprop="url">hello-hexo</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-02-14 14:01:41 / 修改时间：18:00:09" itemprop="dateCreated datePublished" datetime="2023-02-14T14:01:41+08:00">2023-02-14</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
