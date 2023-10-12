@@ -73,6 +73,38 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux_command" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/10/12/Linux_command/" class="article-date">
+  <time class="dt-published" datetime="2023-10-12T07:24:19.807Z" itemprop="datePublished">2023-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux-command"><a href="#Linux-command" class="headerlink" title="Linux command"></a>Linux command</h1><h2 id="批量删除失效软连接"><a href="#批量删除失效软连接" class="headerlink" title="批量删除失效软连接"></a>批量删除失效软连接</h2><p><code>find . -type l -exec test ! -e &#123;&#125; \; -delete</code></p>
+<h2 id="对文件按照行数分割"><a href="#对文件按照行数分割" class="headerlink" title="对文件按照行数分割"></a>对文件按照行数分割</h2><p><code>split -l 111 file file_ -d -a 2</code></p>
+<h2 id="循环生成多个gvcf-sample变量"><a href="#循环生成多个gvcf-sample变量" class="headerlink" title="循环生成多个gvcf_sample变量"></a>循环生成多个gvcf_sample变量</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="built_in">read</span> sample bam</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	<span class="keyword">if</span> [ -s ./<span class="variable">$sample</span>.gvcf.gz ];<span class="keyword">then</span></span><br><span class="line">		<span class="variable">$gatk</span> HaplotypeCaller --emit-ref-confidence GVCF -R <span class="variable">$reference</span> <span class="variable">$chrtag</span> -I <span class="variable">$bam</span> -O ./<span class="variable">$sample</span>.gvcf.gz 2&gt;<span class="variable">$sample</span>.<span class="built_in">log</span></span><br><span class="line">		<span class="built_in">echo</span> -e <span class="string">&quot;<span class="variable">$sample</span>.gvcf.gz is done&quot;</span></span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line">	gvcf_sample=<span class="variable">$&#123;gvcf_sample&#125;</span><span class="string">&quot;-V ./<span class="variable">$sample</span>.gvcf.gz \\&quot;</span>\n</span><br><span class="line"><span class="comment">#	echo &quot;HaplotypeCaller is done&quot;</span></span><br><span class="line"><span class="keyword">done</span> &lt; <span class="variable">$bamlist</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -s <span class="variable">$output</span>.gvcf.gz ];<span class="keyword">then</span></span><br><span class="line">	<span class="variable">$gatk</span> CombineGVCFs -R <span class="variable">$reference</span> <span class="variable">$gvcf_sample</span> -O ./<span class="variable">$output</span>.gvcf.gz 2&gt;CombineGVCFs.<span class="built_in">log</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;CombineGVCFs is done&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/10/12/Linux_command/" data-id="clnmutla40000dc663myk86j2" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Msuite2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/10/12/Msuite2/" class="article-date">
@@ -302,6 +334,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/10/12/Linux_command/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2023/10/12/Msuite2/">(no title)</a>
